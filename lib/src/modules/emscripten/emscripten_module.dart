@@ -149,8 +149,9 @@ class EmscriptenModule extends Module {
                 free = description.function as _Free;
               }
             } else {
-              throw new StateError(
-                  'Unexpected value in entry list! Entry is $entry, value is $value (of type ${value.runtimeType})');
+              // do nothing, unexpected but non-harmful elements
+              // throw new StateError(
+              //     'Unexpected value in entry list! Entry is $entry, value is $value (of type ${value.runtimeType})');
             }
           } else {
             throw new StateError(
